@@ -1,0 +1,117 @@
+/*********
+* Below code is inspired by boilerplate code from codepen. The licence agreement is below.
+**********/
+
+/*********
+*Copyright (c) 2020 by Scott Cox (https://codepen.io/iamscottcox/pen/xROoyR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ 
+**********/
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', 'Roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background: #4e73df;
+}
+
+#counter-app {
+  height: 50%;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 0em;
+  border-radius: 5px;
+}
+
+#counter-app #display {
+  height: 250px;
+  width: 250px;
+  -color: #333333;
+  margin: auto;
+  font-size: calc(150px / 1.5);
+  line-height: 250px;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -background: #efefef;
+  background-image: url("/img/bg.png");
+  background-position: center;
+  background-size: contain;
+}
+
+#counter-app #capacity {
+  height: 0px;
+  width: 250px;
+  -color: #333333;
+  font-size: calc(30px / 1.5);
+  font-weight: bold;
+  line-height: 0px;
+  position: relative;
+   top: -30px;
+  margin: top;
+  background-image: url("/img/bg.png");
+  background-position: center;
+  background-size: contain;
+}
+
+
+#counter-app .container {
+  padding: 1em;
+}
+#counter-app #increment-button {
+  background: #1abc9c;
+}
+#counter-app #decrement-button {
+  background: #ffae23;
+}
+#counter-app #reset-button {
+  background: #f6223f;
+}
+
+#counter-app #set-button {
+  background: #020af3;
+}
+#counter-app .button {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  z-index: 100;
+  margin:  10px;
+  overflow: hidden;
+  line-height: 50px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #efefef;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+#counter-app .button:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
